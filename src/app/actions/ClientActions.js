@@ -15,4 +15,22 @@ export default {
         });
     },
 
+    load() {
+        Api.loadRooms();
+    },
+
+    loaded(newRooms) {
+        AppDispatcher.dispatch({
+            actionType: ClientConstants.LOADED,
+            newRooms,
+        });
+    },
+
+    loadError(response) {
+        AppDispatcher.dispatch({
+            actionType: ClientConstants.LOAD_ERROR,
+            response,
+        });
+    },
+
 };

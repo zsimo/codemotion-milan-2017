@@ -21,7 +21,8 @@
     "babel",
     "scss",
     "eslint",
-    "REST"
+    "REST",
+    "mongoDB"
   ],
   "scripts": {
     "test": "grunt test",
@@ -38,6 +39,7 @@
     "bluebird": "^3.5.0",
     "classnames": "^2.2.5",
     "flux": "^3.1.0",
+    "monk": "^6.0.5",
     "prop-types": "^15.5.7",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",

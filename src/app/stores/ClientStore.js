@@ -28,8 +28,10 @@ const ClientStore = Object.assign({}, EventEmitter.prototype, {
 });
 
 // business logic
-const updateRoom = (newRoom) => {
-    _.findWhere(rooms, { _id: newRoom._id }).people = newRoom.people;
+const updateRooms = ({ newRooms = [] }) => {
+    _.map(newRooms, (room) => {
+        _.findWhere(rooms, { _id: room._id }).people = room.people;
+    });
     ClientStore.emitChangeRooms();
 };
 
@@ -37,7 +39,13 @@ const updateRoom = (newRoom) => {
 AppDispatcher.register((action) => {
     switch (action.actionType) {
     case ClientConstants.NEW_MESSAGE:
-        updateRoom(action.message);
+        updateRooms({ newRooms: [action.message] });
+        break;
+    case ClientConstants.LOADED:
+        updateRooms({ newRooms: action.newRooms });
+        break;
+    case ClientConstants.LOAD_ERROR:
+        // TODO not yet implemented
         break;
     default:
         // no op
