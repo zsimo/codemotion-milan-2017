@@ -1,0 +1,20 @@
+# testing
+test:
+    - 'eslint:source'
+
+# javascripts
+javascripts:
+    - 'webpack:all'
+
+# build
+build:
+    - 'clean:build'
+    - 'javascripts'
+    - 'copy:all'
+    - 'string-replace'
+
+# default
+default:
+    - 'test'
+    - 'build'
+    - 'watch'

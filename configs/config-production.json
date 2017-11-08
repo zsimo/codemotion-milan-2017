@@ -1,0 +1,21 @@
+{
+    "apps": [
+        {
+            "name": "codemotion-milan-2017",
+            "script": "./src/serverApp/server.js",
+            "watch": true,
+            "ignore_watch": ["node_modules", "configs", "grunt"],
+            "env": {
+                "NODE_ENV": "production",
+                "SERVER_HOST": "0.0.0.0",
+                "SERVER_PORT": "8080",
+                "W_SOCK_DISPLAY": {
+                    "SUB_PATH": "websocket",
+                    "PORT": "9090"
+                },
+                "minify": true,
+                "source_map": false
+            }
+        }
+    ]
+}
