@@ -1,11 +1,8 @@
-window.onload = function() {
+import 'babel-polyfill';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import ClientComponent from './components/ClientComponent';
 
-    var ws = new WebSocket('ws://127.0.0.1/websocket');
-
-    ws.onmessage = function(event) {
-
-        var message = JSON.parse(event.data);
-        document.getElementById(`room-${message._id}`).innerHTML = message.people;
-
-    };
-};
+ReactDOM.render(
+    <ClientComponent />,
+    document.getElementById('root'));
