@@ -11,7 +11,7 @@ Codemotion Milan 2017
 ## In short
 
 - [Node.js]
-- [ES6]
+- [ES6] - [React] and [Flux]
 - [WebSocket]
 
 
@@ -85,4 +85,6 @@ npm start
 
 [Node.js]: <https://nodejs.org/it/>
 [ES6]: <http://es6-features.org/>
+[React]: <https://reactjs.org/>
+[Flux]: <https://facebook.github.io/flux/>
 [WebSocket]: <https://developer.mozilla.org/it/docs/WebSockets>

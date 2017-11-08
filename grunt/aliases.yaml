@@ -2,6 +2,11 @@
 test:
     - 'eslint:source'
 
+# stylesheets
+stylesheets:
+    - 'sass:all'
+    - 'cssmin:all'
+
 # javascripts
 javascripts:
     - 'webpack:all'
@@ -10,6 +15,7 @@ javascripts:
 build:
     - 'clean:build'
     - 'javascripts'
+    - 'stylesheets'
     - 'copy:all'
     - 'string-replace'
 

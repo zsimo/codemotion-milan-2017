@@ -6,11 +6,13 @@ module.exports = (grunt) => {
         paths: {
             source: {
                 root: 'src',
+                stylesheets: '<%= paths.source.root %>/stylesheets',
                 javascripts: '<%= paths.source.root %>/app',
                 node_modules: 'node_modules',
             },
             public: {
                 root: 'public',
+                stylesheets: '<%= paths.public.root %>/stylesheets',
                 javascripts: '<%= paths.public.root %>/javascripts',
             },
         },
